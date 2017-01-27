@@ -1,5 +1,5 @@
 import React from "react";
-import warning from "react/lib/warning";
+import warning from "warning";
 import objectPath from "object-path";
 
 import EventComponent from "./EventComponent";
