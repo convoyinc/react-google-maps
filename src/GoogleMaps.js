@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 import EventComponent from "./internals/EventComponent";
 import VirtualContainer from "./internals/VirtualContainer";
@@ -65,7 +66,7 @@ class GoogleMaps extends EventComponent {
     } else {
       const GoogleMapsClass = googleMapsApi.Map;
       instance = new GoogleMapsClass(
-        React.findDOMNode(this.refs.googleMaps),
+        ReactDOM.findDOMNode(this.refs.googleMaps),
         googleMapsConfig
       );
       exposeGetters(this, GoogleMapsClass.prototype, instance);
